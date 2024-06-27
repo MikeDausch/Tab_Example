@@ -7,46 +7,40 @@ Children:
   Type: PropertyGroup
   Children:
   - Name: AuthenticationMode
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: AuthenticationMode
-    Value: 0
   - Name: DefaultUserFolder
     Type: NodePointer
     DataType: NodeId
-    ReferenceType: HasProperty
-    Value: {"IdType":2,"Id":"edde0114e78a4c5081d7c36a5564c50e","Namespace":20}
+    Value: "/Objects/Tab_Example/Security/Users"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":61}
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
 - Name: PasswordPolicy
   Type: PasswordPolicy
   Children:
   - Name: MaximumPasswordAge
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: EnforcePasswordHistory
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
     Value: 1
   - Name: MinimumPasswordAge
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: MinimumPasswordLength
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
     Value: 8
 - Name: AlarmConfiguration
   Type: PropertyGroup
   Children:
   - Name: BranchingEnabled
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Boolean
-    ReferenceType: HasComponent
-    Value: false
 - File: UI/UI.yaml
 - File: Model/Model.yaml
 - File: Converters/Converters.yaml

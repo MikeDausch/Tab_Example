@@ -2,3 +2,4 @@ Name: Model
 Type: ModelCategoryFolder
 Children:
 - File: Setup/Setup.yaml
+- File: Faults/Faults.yaml

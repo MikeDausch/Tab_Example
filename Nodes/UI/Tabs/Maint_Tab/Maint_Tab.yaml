@@ -15,7 +15,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -25,12 +25,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -45,46 +44,38 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0
   - Name: Width
     Type: BaseVariableType
     DataType: Size
@@ -122,36 +113,23 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -162,7 +140,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -174,7 +151,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -192,7 +168,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: Button1
       Type: Button
       Children:
@@ -220,7 +195,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: VerticalAlignment
       Type: BaseVariableType
       DataType: VerticalAlignment
@@ -253,36 +227,23 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -293,7 +254,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -305,7 +265,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -323,7 +282,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: Button1
       Type: Button
       Children:
@@ -351,7 +309,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -361,7 +318,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: VerticalAlignment
       Type: BaseVariableType
       DataType: VerticalAlignment
@@ -394,36 +350,23 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -434,7 +377,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -446,7 +388,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -464,7 +405,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: VerticalAlignment
       Type: BaseVariableType
       DataType: VerticalAlignment
@@ -489,7 +429,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
@@ -497,28 +437,16 @@ Children:
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -529,7 +457,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -541,7 +468,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -559,7 +485,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: NumericStatus_wLabel3
       Type: NumericStatus_wLabel
       Children:
@@ -574,36 +499,23 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -614,7 +526,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -626,7 +537,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -644,7 +554,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: NumericStatus_wLabel4
       Type: NumericStatus_wLabel
       Children:
@@ -659,36 +568,23 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
@@ -699,7 +595,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -711,7 +606,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -729,7 +623,6 @@ Children:
       - Name: Enable Write
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
 - Name: Stop_Angles
   Id: g=c39888ae90ab0e97ec782f68562ddde8
   Supertype: Tab
@@ -744,7 +637,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -754,12 +647,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -774,46 +666,38 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0
   - Name: Width
     Type: BaseVariableType
     DataType: Size
@@ -851,40 +735,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -901,7 +772,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -913,7 +783,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -933,7 +802,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -953,40 +821,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1003,7 +858,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1015,7 +869,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1035,7 +888,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1055,40 +907,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1105,7 +944,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1117,7 +955,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1137,7 +974,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1157,40 +993,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1207,7 +1030,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1219,7 +1041,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1239,7 +1060,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1254,7 +1074,6 @@ Children:
       Type: BaseVariableType
       DataType: ContentVerticalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Type: BaseVariableType
       DataType: Size
@@ -1274,40 +1093,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1324,7 +1130,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1336,7 +1141,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1356,7 +1160,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1389,40 +1192,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1439,7 +1229,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1451,7 +1240,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1471,7 +1259,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1491,40 +1278,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1541,7 +1315,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1553,7 +1326,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1573,7 +1345,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1593,40 +1364,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1643,7 +1401,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1655,7 +1412,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1675,7 +1431,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1695,40 +1450,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1745,7 +1487,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1757,7 +1498,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1777,7 +1517,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1792,7 +1531,6 @@ Children:
       Type: BaseVariableType
       DataType: ContentVerticalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Type: BaseVariableType
       DataType: Size
@@ -1812,40 +1550,27 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+            Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
       - Name: Variable
         Type: AnalogItemType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EURange
           Type: RangeType
-          DataType: EURange
-          Value: 
-           {
-            "TypeId": {
-             "Id": 884
-            },
-            "Body": {
-             "low": 0.0,
-             "high": 0.0
-            }
-           }
+          DataType: Range
           Children:
           - Name: Low
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+          Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1862,7 +1587,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1874,7 +1598,6 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           Children:
           - Name: DynamicLink
             Type: DynamicLink
@@ -1894,7 +1617,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -1919,36 +1641,23 @@ Children:
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "{NodeId:ns=20;g=ca3734ce-1e6c-47bc-8c97-00f9c572ba3a}"
+          Value: "/Objects/Tab_Example/UI/DefaultStyleSheet/ButtonStyles/Default/Color"
     - Name: Variable
       Type: AnalogItemType
       DataType: Float
-      Value: 0.0
       Children:
       - Name: EURange
         Type: RangeType
-        DataType: EURange
-        Value: 
-         {
-          "TypeId": {
-           "Id": 884
-          },
-          "Body": {
-           "low": 0.0,
-           "high": 0.0
-          }
-         }
+        DataType: Range
         Children:
         - Name: Low
           Type: BaseVariableType
           DataType: Double
           ReferenceType: HasProperty
-          Value: 0.0
         - Name: High
           Type: BaseVariableType
           DataType: Double
           ReferenceType: HasProperty
-          Value: 0.0
     - Name: Label
       Type: BaseDataVariableType
       DataType: String
@@ -1959,7 +1668,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -1971,7 +1679,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -1989,7 +1696,6 @@ Children:
     - Name: Enable Write
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -2024,7 +1730,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -2034,12 +1740,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -2054,46 +1759,38 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0
   - Name: Width
     Type: BaseVariableType
     DataType: Size
@@ -2118,7 +1815,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -2128,12 +1825,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -2148,46 +1844,38 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0
   - Name: Width
     Type: BaseVariableType
     DataType: Size
@@ -2212,7 +1900,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -2222,12 +1910,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -2242,58 +1929,49 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0
   - Name: SpinBox1
     Type: SpinBox
     Children:
     - Name: Value
       Type: BaseDataVariableType
       DataType: Double
-      Value: 0.0
       Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+        Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
         Children:
         - Name: Mode
           Type: BaseVariableType
@@ -2368,7 +2046,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
@@ -2410,7 +2087,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: StringFormatter1
           Type: StringFormatter
@@ -2429,7 +2105,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+              Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -2447,7 +2123,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -2507,7 +2182,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: StringFormatter1
           Type: StringFormatter
@@ -2526,7 +2200,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "{NodeId:ns=20;g=38e86fca-d46b-ba4a-be2a-52735f6152fa}"
+              Value: "/Objects/Tab_Example/Model/Setup/AnalogVariable1"
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -2566,7 +2240,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: Label4
       Type: Label
       Children:
@@ -2613,7 +2286,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
 - Name: NewTab
   Id: g=fd7ecfe60f36dfe3c4bf35451b403119
   Supertype: Tab
@@ -2628,7 +2300,7 @@ Children:
       - Name: ListenEventType
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
@@ -2638,12 +2310,11 @@ Children:
           - Name: ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
-              Value: {"Id":58}
+              Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
@@ -2658,43 +2329,35 @@ Children:
             - Name: NewPanel
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+              Value: "/Objects/Tab_Example/UI/Screens/MainNav"
             - Name: AliasNode
               Type: BaseDataVariableType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: MouseClickEvent
         Children:
         - Name: EventId
           Type: PropertyType
           DataType: ByteString
-          Value: ""
         - Name: EventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceNode
           Type: PropertyType
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: SourceName
           Type: PropertyType
           DataType: String
-          Value: ""
         - Name: Time
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: ReceiveTime
           Type: PropertyType
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: Message
           Type: PropertyType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
-          Value: 0

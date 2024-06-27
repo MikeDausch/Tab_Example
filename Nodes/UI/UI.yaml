@@ -5,69 +5,6 @@ Children:
   Id: g=c0b75973b240aa43f91cfb52c44146cf
   Type: StyleSheet
   Children:
-  - Name: ButtonStyle
-    Type: ButtonStyle
-    Children:
-    - Name: Color
-      Id: g=ca3734ce1e6c47bc8c9700f9c572ba3a
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#c3c3c3"
-  - Name: ButtonAccentStyle
-    Type: ButtonStyle
-  - Name: DataInputStyle
-    Type: DataInputStyle
-  - Name: SwitchStyle
-    Type: SwitchStyle
-  - Name: GaugeStyle
-    Type: GaugeStyle
-    Children:
-    - Name: HandleBorderWidth
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 3.0
-    - Name: FontSize
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 18.0
-    - Name: HandleSize
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 30.0
-    - Name: BorderWidth
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 3.0
-  - Name: NavigationPanelStyle
-    Type: NavigationPanelStyle
-    Children:
-    - Name: IconUsesTextColor
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-  - Name: ChartStyle
-    Type: ChartStyle
-  - Name: DataListStyle
-    Type: DataListStyle
-  - Name: ToolTipStyle
-    Type: ToolTipStyle
-  - Name: ScrollBarStyle
-    Type: ScrollBarStyle
-    Children:
-    - Name: HandleBorderWidth
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 3.0
-    - Name: Size
-      Type: BaseDataVariableType
-      DataType: Size
-      Value: 18.0
-  - Name: AccordionStyle
-    Type: AccordionStyle
-  - Name: PieChartStyle
-    Type: PieChartStyle
-  - Name: HistogramChartStyle
-    Type: HistogramChartStyle
   - Name: ScreenColor
     Type: BaseDataVariableType
     DataType: Color
@@ -75,7 +12,231 @@ Children:
   - Name: FontPixelSize
     Type: BaseDataVariableType
     DataType: Float
-    Value: 16.0
+    Value: 14.0
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+      Children:
+      - Name: HandleBorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
+      - Name: HandleSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 30.0
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+      Children:
+      - Name: IconUsesTextColor
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+      Children:
+      - Name: HandleBorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: Size
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+    - Name: Isaac_Label
+      Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 75.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#117311"
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+      Children:
+      - Name: IndicatorSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle
+      Children:
+      - Name: IndicatorSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
 - Name: NativePresentationEngine
   Type: NativePresentationEngine
   ReferenceType: HasOrderedComponent
@@ -87,30 +248,30 @@ Children:
   - Name: StartWindow
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"ef90f17c60c1c757d3f23dfe094e1450","Namespace":20}
+    Value: "/Objects/Tab_Example/UI/MainWindow"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":12,"Namespace":5}
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
   - Name: StyleSheet
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"c0b75973b240aa43f91cfb52c44146cf","Namespace":20}
+    Value: "/Objects/Tab_Example/UI/DefaultStyleSheet"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":447,"Namespace":5}
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
   - Name: StartingUser
     Type: NodePointer
     DataType: NodeId
-    Value: {"Id":46,"Namespace":1}
+    Value: "/Objects/Users/Anonymous"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":14,"Namespace":1}
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
   - Name: Sessions
     Type: BaseObjectType
 - Name: MainWindow
@@ -142,7 +303,6 @@ Children:
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -198,12 +358,10 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 0.0
         - Name: TopMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 0.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -220,7 +378,7 @@ Children:
           - Name: ListenEventType
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":16,"Namespace":5}
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
@@ -230,12 +388,11 @@ Children:
               - Name: ns=3;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Type: PropertyType
                   DataType: NodeId
-                  Value: {"Id":58}
+                  Value: "/Types/ObjectTypes/BaseObjectType"
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
@@ -257,47 +414,57 @@ Children:
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelNewPanelDescription"}
-                  Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+                  Value: "/Objects/Tab_Example/UI/Screens/MainNav"
                 - Name: AliasNode
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelAliasNodeDescription"}
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
             - Name: EventId
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
-              Value: 0
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -124.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 31.0
     - Name: Logo
       Type: Image
       Children:
@@ -309,51 +476,51 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: DynamicColor
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#2fa3f0"
+        Value: "#3dabf5"
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
-  - Name: WindowResizeObserver
-    Type: NetLogic
-    Children:
-    - Name: ScreenSize
-      Type: BaseDataVariableType
-      DataType: ScreenSize
-      Value: 0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 300.0
   - Name: PanelLoader1
     Type: PanelLoader
     Children:
     - Name: Panel
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
+      Value: "/Objects/Tab_Example/UI/Screens/MainNav"
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":71,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
     - Class: Reference
       Target: ns=5;i=478
       Direction: Forward
@@ -386,14 +553,12 @@ Children:
       Type: BaseDataVariableType
       DataType: PanelLoaderAnimationTypeEnum
       ModellingRule: Optional
-      Value: 0
   - Name: Label1
     Type: Label
     Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: StringFormatter1
         Type: StringFormatter
@@ -436,7 +601,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -446,7 +610,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -460,19 +623,21 @@ Children:
   - Name: FullScreen
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
       Value: "{Session}/IsWeb"
+  - Name: AlwaysOnTop
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
 - Name: WebPresentationEngine
   Type: ns=16;PresentationEngine
   Children:
   - Name: Protocol
     Type: BaseDataVariableType
     DataType: Protocol
-    Value: 0
   - Name: IPAddress
     Type: BaseDataVariableType
     DataType: String
@@ -480,34 +645,34 @@ Children:
   - Name: Port
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 8484
+    Value: 8585
   - Name: StartWindow
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"ef90f17c60c1c757d3f23dfe094e1450","Namespace":20}
+    Value: "/Objects/Tab_Example/UI/MainWindow"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":12,"Namespace":5}
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
   - Name: StyleSheet
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"c0b75973b240aa43f91cfb52c44146cf","Namespace":20}
+    Value: "/Objects/Tab_Example/UI/DefaultStyleSheet"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":447,"Namespace":5}
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
   - Name: StartingUser
     Type: NodePointer
     DataType: NodeId
-    Value: {"Id":46,"Namespace":1}
+    Value: "/Objects/Users/Anonymous"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":14,"Namespace":1}
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
   - Name: Sessions
     Type: BaseObjectType
     Children:
@@ -523,52 +688,36 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         AccessLevel: Read
-        Value: false
       - Name: IsWeb
         Type: BaseDataVariableType
         DataType: Boolean
         AccessLevel: Read
-        Value: false
       - Name: User
         Type: NodePointer
         DataType: NodeId
         AccessLevel: Read
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
         Children:
         - Name: Kind
           Type: PropertyType
           DataType: NodeId
-          Value: {"Id":14,"Namespace":1}
+          Value: "/Types/ObjectTypes/BaseObjectType/UserType"
       - Name: ActualLocaleId
         Type: BaseVariableType
         DataType: LocaleId
         ReferenceType: HasProperty
-        Value: ""
       - Name: ActualLanguage
         Type: BaseVariableType
         DataType: LocaleId
         ReferenceType: HasProperty
-        Value: ""
       - Name: ActualMeasurementSystem
         Type: BaseVariableType
         DataType: MeasurementSystem
         ReferenceType: HasProperty
-        Value: 0
       - Name: TimeZoneOffset
         Type: BaseVariableType
         DataType: TimeZoneDataType
         ReferenceType: HasProperty
         AccessLevel: Read
-        Value: 
-         {
-          "TypeId": {
-           "Id": 8912
-          },
-          "Body": {
-           "offset": 0,
-           "daylightSavingInOffset": false
-          }
-         }
       - Name: Groups
         Type: BaseObjectType
       - Name: Roles
@@ -591,11 +740,23 @@ Children:
         Type: BaseVariableType
         DataType: Boolean
         AccessLevel: Read
-        Value: false
+      - Name: IpAddress
+        Type: BaseDataVariableType
+        DataType: String
+        AccessLevel: Read
   - Name: MaxNumberOfConnections
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 10
+  - Name: LoginWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Tab_Example/UI/MainWindow"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
 - File: Screens/Screens.yaml
 - File: Tabs/Tabs.yaml
 - File: Templates/Templates.yaml
@@ -624,12 +785,10 @@ Children:
   - Name: Alias_1
     Type: Alias
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Rectangle1
     Type: Rectangle
     Children:
@@ -669,7 +828,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -698,19 +856,17 @@ Children:
     - Name: MoveTarget
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":71,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: Label2
       Type: Label
       Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -742,7 +898,6 @@ Children:
       - Name: Text
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -795,7 +950,6 @@ Children:
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: FillColor
       Type: BaseDataVariableType
       DataType: Color
@@ -805,16 +959,14 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: MoveTarget
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":71,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
@@ -853,7 +1005,7 @@ Children:
         - Name: ListenEventType
           Type: PropertyType
           DataType: NodeId
-          Value: {"Id":14,"Namespace":5}
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseDownEvent"
         - Name: MethodsToCall
           Type: BaseObjectType
           Children:
@@ -863,12 +1015,11 @@ Children:
             - Name: ns=3;ObjectPointer
               Type: NodePointer
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
               Children:
               - Name: Kind
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"Id":58}
+                Value: "/Types/ObjectTypes/BaseObjectType"
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
@@ -889,35 +1040,27 @@ Children:
           - Name: EventId
             Type: PropertyType
             DataType: ByteString
-            Value: ""
           - Name: EventType
             Type: PropertyType
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: SourceNode
             Type: PropertyType
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: SourceName
             Type: PropertyType
             DataType: String
-            Value: ""
           - Name: Time
             Type: PropertyType
             DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
           - Name: ReceiveTime
             Type: PropertyType
             DataType: UtcTime
-            Value: "1601-01-01T00:00:00.0000000"
           - Name: Message
             Type: PropertyType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Severity
             Type: PropertyType
             DataType: UInt16
-            Value: 0
       - Name: HitTestVisible
         Type: BaseDataVariableType
         DataType: Boolean
@@ -927,21 +1070,187 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
-    Value: false
   - Name: MoveTarget
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":71,"Namespace":5}
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
   - Name: LeftMargin
     Type: BaseVariableType
     DataType: Size
-    Value: 0.0
   - Name: TopMargin
     Type: BaseVariableType
     DataType: Size
-    Value: 0.0
+- Name: StyleSheet1
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle

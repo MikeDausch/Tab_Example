@@ -18,26 +18,23 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -52,12 +49,10 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -71,7 +66,6 @@ Children:
     - Name: CurrentTabIndex
       Type: BaseDataVariableType
       DataType: Int32
-      Value: 0
     - Class: Reference
       Target: ns=5;i=1181
       Direction: Forward
@@ -153,7 +147,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Button1
         Type: Button
         Children:
@@ -198,7 +191,7 @@ Children:
           - Name: ListenEventType
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":16,"Namespace":5}
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
@@ -208,12 +201,11 @@ Children:
               - Name: ns=3;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Type: PropertyType
                   DataType: NodeId
-                  Value: {"Id":58}
+                  Value: "/Types/ObjectTypes/BaseObjectType"
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
@@ -235,47 +227,152 @@ Children:
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelNewPanelDescription"}
-                  Value: {"IdType":2,"Id":"534bdd3d5ede9d8f8a52185a374efe78","Namespace":20}
+                  Value: "/Objects/Tab_Example/UI/Screens/StatusNav"
                 - Name: AliasNode
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelAliasNodeDescription"}
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
             - Name: EventId
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
-              Value: 0
+      - Name: Button3
+        Type: Button
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Status"}
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: MouseClickEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{PanelLoader1}@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "ChangePanel"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: NewPanel
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":5,"TextId":"ChangePanelNewPanelDescription"}
+                  Value: "/Objects/Tab_Example/UI/Screens/StatusNav"
+                - Name: AliasNode
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":5,"TextId":"ChangePanelAliasNodeDescription"}
+                  ValueRank: ScalarOrOneDimension
+          - Name: EventArguments
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
       - Name: Button2
         Type: Button
         Children:
@@ -320,7 +417,7 @@ Children:
           - Name: ListenEventType
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":16,"Namespace":5}
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
@@ -330,12 +427,11 @@ Children:
               - Name: ns=3;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Type: PropertyType
                   DataType: NodeId
-                  Value: {"Id":58}
+                  Value: "/Types/ObjectTypes/BaseObjectType"
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
@@ -357,86 +453,40 @@ Children:
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelNewPanelDescription"}
-                  Value: {"IdType":2,"Id":"e90ecad74bc1b3671f2307bcc1af9023","Namespace":20}
+                  Value: "/Objects/Tab_Example/UI/Screens/MaintNav"
                 - Name: AliasNode
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelAliasNodeDescription"}
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
             - Name: EventId
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
-              Value: 0
-      - Name: Button3
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Recipes"}
-        - Name: HorizontalAlignment
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          ModellingRule: Optional
-          Value: 3
-        - Name: VerticalAlignment
-          Type: BaseVariableType
-          DataType: VerticalAlignment
-          ModellingRule: Optional
-          Value: 3
-        - Name: LeftMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 10.0
-        - Name: TopMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 10.0
-        - Name: RightMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 10.0
-        - Name: BottomMargin
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 10.0
-      - Name: Button4
+      - Name: Button5
         Type: Button
         Children:
         - Name: Text
@@ -501,7 +551,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Button1
         Type: Button
         Children:
@@ -546,7 +595,7 @@ Children:
           - Name: ListenEventType
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":16,"Namespace":5}
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
@@ -556,12 +605,11 @@ Children:
               - Name: ns=3;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Type: PropertyType
                   DataType: NodeId
-                  Value: {"Id":58}
+                  Value: "/Types/ObjectTypes/BaseObjectType"
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
@@ -583,48 +631,132 @@ Children:
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelNewPanelDescription"}
-                  Value: {"IdType":2,"Id":"a9593cc91955b3e8ca5fc3c4d250fffb","Namespace":20}
+                  Value: "/Objects/Tab_Example/UI/Screens/_01_SetupNav"
                 - Name: AliasNode
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":5,"TextId":"ChangePanelAliasNodeDescription"}
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
             - Name: EventId
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
-              Value: 0
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}>{1}"
+            - Name: ns=3;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: KeyValueConverter1
+                Type: ValueMapConverter
+                Children:
+                - Name: Source
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                - Name: ns=3;Pairs
+                  Type: BaseObjectType
+                  ModellingRule: None
+                  Children:
+                  - Name: Pair
+                    Type: ValueMapPair
+                    ModellingRule: None
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      ModellingRule: None
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: String
+                      ModellingRule: None
+            - Name: ns=3;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
       - Name: Button2
+        Type: Button
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Logout"}
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+      - Name: Button3
         Type: Button
         Children:
         - Name: Text
@@ -689,7 +821,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Button1
         Type: Button
         Children:
@@ -839,7 +970,195 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
-- Name: SetupNav
+- Name: MaintNav
+  Id: g=e90ecad74bc1b3671f2307bcc1af9023
+  Supertype: TabScreen
+  ReferenceType: HasComponent
+  Children:
+  - Name: NavigationPanel1
+    Type: NavigationPanel
+    Children:
+    - Name: Panels
+      Type: BaseObjectType
+      Children:
+      - Name: Panel2
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../Panel@DisplayName"
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Stop_Angles"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel1
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Counters"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel3
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"I O"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/I_O"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel4
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Solenoids"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel5
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"New Panel"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Stop_Angles"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel6
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Counters"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel8
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Mike Tab"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/MikeTab"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel9
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"82d40d2ee36e844f0acf926803b97fd3","Namespace":20}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel10
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"4dfb5772ae67a686dc898b3461067dc0","Namespace":20}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel11
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Parent Panel"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"2c53f7e01b76bbfc97d612f1da0a54ca","Namespace":20}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: CurrentPanel
+      Type: NodePointer
+      DataType: NodeId
+      AccessLevel: Read
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+    - Name: CurrentTabIndex
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Class: Reference
+      Target: ns=5;i=1181
+      Direction: Forward
+    - Class: Reference
+      Target: ns=5;i=1183
+      Direction: Forward
+- Name: _01_SetupNav
   Id: g=a9593cc91955b3e8ca5fc3c4d250fffb
   Supertype: TabScreen
   ReferenceType: HasComponent
@@ -856,32 +1175,30 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"2aa6bb9c802faa8aaffa73ca6b395df9","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Load"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel2
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"ff76cc0ea88e776ca0f076276f9ea9d7","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Orient"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel3
         Type: NavigationPanelItem
         Children:
@@ -892,12 +1209,12 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"35fefc1c94622f77e6f10f9d579bfb1c","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Fill_1"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel4
         Type: NavigationPanelItem
         Children:
@@ -908,12 +1225,12 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"43ce4030228683ed4c57f4c665b002e5","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Fill_2"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel5
         Type: NavigationPanelItem
         Children:
@@ -924,12 +1241,12 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"cffeac4f35d580fe24007dd2923c1170","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Material_Feed"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel6
         Type: NavigationPanelItem
         Children:
@@ -940,19 +1257,18 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"b202f37c6b133c1e1dc419123458f877","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Setup_Tab/Closing_Unload"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel7
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -961,21 +1277,19 @@ Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
     - Name: CurrentTabIndex
       Type: BaseDataVariableType
       DataType: Int32
-      Value: 0
     - Class: Reference
       Target: ns=5;i=1181
       Direction: Forward
@@ -999,32 +1313,30 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"b25901ea0cf520bca7e00e898de57590","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Status"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel2
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"86a54d8d1277ab2a99ccad77cd3b10cf","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Metering"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel3
         Type: NavigationPanelItem
         Children:
@@ -1035,12 +1347,12 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"a4a3e32c77c73a177f345ce3f7c0eba9","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Fill_Lift"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel4
         Type: NavigationPanelItem
         Children:
@@ -1051,60 +1363,57 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"656779fe49ef4e55dc1a2b27a86363c7","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Fill_Valve"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel5
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"25cc77c3d7397fcdb425b59e80897626","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Tab1"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel6
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"99e681818cc16458dd0f4af29d529edd","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Mike4444"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel7
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"27b9fbbb35a18eb7208f1242773cf646","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Tab2"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel8
         Type: NavigationPanelItem
         Children:
@@ -1115,358 +1424,120 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"71b19fd990a24820bc4324a382c04d36","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Ron_Tab"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel9
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"7b27c6517aeaf68803d45b4c412dea77","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Lucas_Tab"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-    - Name: CurrentPanel
-      Type: NodePointer
-      DataType: NodeId
-      AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
-    - Name: CurrentTabIndex
-      Type: BaseDataVariableType
-      DataType: Int32
-      Value: 0
-    - Class: Reference
-      Target: ns=5;i=1181
-      Direction: Forward
-    - Class: Reference
-      Target: ns=5;i=1183
-      Direction: Forward
-- Name: MaintNav
-  Id: g=e90ecad74bc1b3671f2307bcc1af9023
-  Supertype: TabScreen
-  ReferenceType: HasComponent
-  Children:
-  - Name: NavigationPanel1
-    Type: NavigationPanel
-    Children:
-    - Name: Panels
-      Type: BaseObjectType
-      Children:
-      - Name: Panel2
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../Panel@DisplayName"
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"c39888ae90ab0e97ec782f68562ddde8","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel1
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"c6f858c9eb72d3bd91901ce194c5debc","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel3
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"I O"}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"a22118fe9960763f4a16fa4b4b71a7e6","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel4
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"e037be785ec2fbb75dcc3bbac4fed803","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel5
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"New Panel"}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"c39888ae90ab0e97ec782f68562ddde8","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel6
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"c6f858c9eb72d3bd91901ce194c5debc","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel8
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Mike Tab"}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"65c99b128cec1f383b0bca834f3e3886","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel9
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"82d40d2ee36e844f0acf926803b97fd3","Namespace":20}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel10
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"4dfb5772ae67a686dc898b3461067dc0","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Tab4"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel11
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Parent Panel"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"2c53f7e01b76bbfc97d612f1da0a54ca","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/FastTab"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel12
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Dev_Tab"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel13
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Jeff_Tab"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel14
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Tab_Example/UI/Tabs/Status_Tab/Isaac_Tab"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
     - Name: CurrentTabIndex
       Type: BaseDataVariableType
       DataType: Int32
-      Value: 0
     - Class: Reference
       Target: ns=5;i=1181
       Direction: Forward
     - Class: Reference
       Target: ns=5;i=1183
       Direction: Forward
-- Name: Tab
-  Id: g=14279e544006edd8e9aa800598779e30
-  Supertype: Screen
-  ReferenceType: HasComponent
-  Children:
-  - Name: GoTo_Main
-    Type: GoTo_Main
-    Children:
-    - Name: MouseClickEventHandler1
-      Type: EventHandler
-      Children:
-      - Name: ListenEventType
-        Type: PropertyType
-        DataType: NodeId
-        Value: {"Id":16,"Namespace":5}
-      - Name: MethodsToCall
-        Type: BaseObjectType
-        Children:
-        - Name: MethodContainer1
-          Type: BaseObjectType
-          Children:
-          - Name: ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"Id":58}
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{PanelLoader1}@NodeId"
-          - Name: Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "ChangePanel"
-          - Name: InputArguments
-            Type: BaseObjectType
-            Children:
-            - Name: NewPanel
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Value: {"IdType":2,"Id":"388c35e5e5b080ab2fe936e4b456f7a4","Namespace":20}
-            - Name: AliasNode
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-      - Name: EventArguments
-        Type: MouseClickEvent
-        Children:
-        - Name: EventId
-          Type: PropertyType
-          DataType: ByteString
-          Value: ""
-        - Name: EventType
-          Type: PropertyType
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
-        - Name: SourceNode
-          Type: PropertyType
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
-        - Name: SourceName
-          Type: PropertyType
-          DataType: String
-          Value: ""
-        - Name: Time
-          Type: PropertyType
-          DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
-        - Name: ReceiveTime
-          Type: PropertyType
-          DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
-        - Name: Message
-          Type: PropertyType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Severity
-          Type: PropertyType
-          DataType: UInt16
-          Value: 0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 640.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 530.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
 - Name: MaintNav4
   Id: g=2677c578a3f8d01f7e05a760faf0e990
   Supertype: TabScreen
@@ -1484,46 +1555,42 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"c6f858c9eb72d3bd91901ce194c5debc","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/Counters"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
       - Name: Panel2
         Type: NavigationPanelItem
         Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"a22118fe9960763f4a16fa4b4b71a7e6","Namespace":20}
+          Value: "/Objects/Tab_Example/UI/Tabs/Maint_Tab/I_O"
           Children:
           - Name: Kind
             Type: PropertyType
             DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
         DataType: NodeId
-        Value: {"Id":6,"Namespace":5}
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
     - Name: CurrentTabIndex
       Type: BaseDataVariableType
       DataType: Int32
-      Value: 0
     - Class: Reference
       Target: ns=5;i=1181
       Direction: Forward

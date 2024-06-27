@@ -11,4 +11,3 @@ Children:
     Type: BaseVariableType
     DataType: MeasurementSystem
     ReferenceType: HasProperty
-    Value: 0
